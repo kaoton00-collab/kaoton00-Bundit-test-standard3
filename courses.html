@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สาขาวิชาที่เปิดสอน - วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* Header */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 5px;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background-color: #002244;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: #0099FF;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* Section Header Style */
+        .section-header {
+            margin-bottom: 30px;
+        }
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: #222;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background-color: #0099e6;
+        }
+
+        /* Grid Layout */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Container with Image & Overlay */
+        .course-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 240px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        /* Brown Overlay Effect */
+        .course-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(139, 69, 19, 0.65); /* โทนสีน้ำตาลตามตัวอย่าง */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            transition: background 0.3s ease;
+        }
+
+        .course-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .course-card:hover .course-overlay {
+            background: rgba(139, 69, 19, 0.5); /* สว่างขึ้นเมื่อ Hover */
+        }
+
+        .course-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        .course-subtitle {
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #002244;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนหัว (Header) -->
+    <header>
+        <h1>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</h1>
+        <p>Lanna Polytechnic ChiangMai Technological College</p>
+    </header>
+
+    <!-- เมนูหลัก (Navigation Bar) -->
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="executive.html">ข้อมูลผู้บริหาร</a>
+        <a href="staff.html">ข้อมูลบุคลากร</a>
+        <a href="students.html">ข้อมูลนักเรียน นักศึกษา</a>
+        <a href="courses.html" class="active">สาขาวิชาที่เปิดสอน</a>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="container">
+        
+        <div class="section-header">
+            <h2>สาขาที่เปิดรับสมัคร ช่างอุตสาหกรรม</h2>
+        </div>
+
+        <div class="courses-grid">
+            
+            <!-- สาขา 1 -->
+            <div class="course-card">
+                <img src="auto.jpg" alt="สาขาช่างยนต์">
+                <div class="course-overlay">
+                    <div class="course-title">สาขาช่างยนต์</div>
+                    <div class="course-subtitle">(Auto Mechanical Technology)</div>
+                </div>
+            </div>
+
+            <!-- สาขา 2 -->
+            <div class="course-card">
+                <img src="ev.jpg" alt="สาขายานยนต์ไฟฟ้า">
+                <div class="course-overlay">
+                    <div class="course-title">สาขายานยนต์ไฟฟ้า</div>
+                    <div class="course-subtitle">(Electric Vehicle)</div>
+                </div>
+            </div>
+
+            <!-- สาขา 3 -->
+            <div class="course-card">
+                <img src="electrical.jpg" alt="สาขาช่างไฟฟ้ากำลัง">
+                <div class="course-overlay">
+                    <div class="course-title">สาขาช่างไฟฟ้ากำลัง</div>
+                    <div class="course-subtitle">(Electrical Power Technology)</div>
+                </div>
+            </div>
+
+            <!-- สาขา 4 -->
+            <div class="course-card">
+                <img src="construction.jpg" alt="สาขาช่างก่อสร้าง">
+                <div class="course-overlay">
+                    <div class="course-title">สาขาช่างก่อสร้าง</div>
+                    <div class="course-subtitle">(Construction Technology)</div>
+                </div>
+            </div>
+
+            <!-- สาขา 5 -->
+            <div class="course-card">
+                <img src="architecture.jpg" alt="สาขางานสถาปัตยกรรม">
+                <div class="course-overlay">
+                    <div class="course-title">สาขางานสถาปัตยกรรม</div>
+                    <div class="course-subtitle">(Architectural Technology)</div>
+                </div>
+            </div>
+
+            <!-- สาขา 6 -->
+            <div class="course-card">
+                <img src="it.jpg" alt="สาขาเทคโนโลยีสารสนเทศ">
+                <div class="course-overlay">
+                    <div class="course-title">สาขาเทคโนโลยีสารสนเทศ</div>
+                    <div class="course-subtitle">(Information Technology)</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ส่วนท้าย (Footer) -->
+    <footer>
+        <p>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</p>
+        <p>โทรศัพท์: 053-213-061 | อีเมล: lanna@polytechnic.ac.th</p>
+        <p>Copyright © 2026 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
