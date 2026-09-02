@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลนักเรียน นักศึกษา - วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 1. Header & Banner */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 5px;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background-color: #002244;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: #0099FF;
+            color: white;
+        }
+
+        /* Container Content */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 1.5rem;
+            color: #003366;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #0099FF;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Student Grid Layout */
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        /* Student Card Design */
+        .student-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 5px solid #0099FF;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+        }
+
+        .student-img {
+            width: 160px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            background-color: #e9e9e9;
+        }
+
+        .student-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .student-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .student-detail {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .student-detail span {
+            font-weight: bold;
+            color: #0099FF;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #002244;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนหัว (Header) -->
+    <header>
+        <h1>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</h1>
+        <p>Lanna Polytechnic ChiangMai Technological College</p>
+    </header>
+
+    <!-- เมนูหลัก (Navigation Bar) -->
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="executive.html">ข้อมูลผู้บริหาร</a>
+        <a href="staff.html">ข้อมูลบุคลากร</a>
+        <a href="students.html" class="active">ข้อมูลนักเรียน นักศึกษา</a>
+        <a href="courses.html">สาขาวิชาที่เปิดสอน</a>
+    </nav>
+
+    <!-- ส่วนเนื้อหา (Content Area) -->
+    <div class="container">
+        
+        <h3 class="section-title">รายชื่อนักเรียน นักศึกษา (ห้อง 3102)</h3>
+
+        <div class="student-grid">
+            
+            <!-- นักเรียนคนที่ 1 -->
+            <div class="student-card">
+                <!-- เปลี่ยน student1.jpg เป็นชื่อไฟล์รูปภาพของนายบัณฑิต -->
+                <img src="student1.jpg" alt="บัณฑิต จำปา" class="student-img">
+                <div class="student-name">นายบัณฑิต จำปา</div>
+                <div class="student-info">
+                    <div class="student-detail"><span>สาขาวิชา:</span> เทคโนโลยีสารสนเทศ</div>
+                    <div class="student-detail"><span>ห้องเรียน:</span> 3102</div>
+                    <div class="student-detail"><span>สถานะ:</span> กำลังศึกษา</div>
+                </div>
+            </div>
+
+            <!-- นักเรียนคนที่ 2 -->
+            <div class="student-card">
+                <!-- เปลี่ยน student2.jpg เป็นชื่อไฟล์รูปภาพของนายชณปกร -->
+                <img src="student2.jpg" alt="ชณปกร หน่อแก้ว" class="student-img">
+                <div class="student-name">นายชณปกร หน่อแก้ว</div>
+                <div class="student-info">
+                    <div class="student-detail"><span>สาขาวิชา:</span> เทคโนโลยีสารสนเทศ</div>
+                    <div class="student-detail"><span>ห้องเรียน:</span> 3102</div>
+                    <div class="student-detail"><span>สถานะ:</span> กำลังศึกษา</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ส่วนท้าย (Footer) -->
+    <footer>
+        <p>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</p>
+        <p>โทรศัพท์: 053-213-061 | อีเมล: lanna@polytechnic.ac.th</p>
+        <p>Copyright © 2026 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
