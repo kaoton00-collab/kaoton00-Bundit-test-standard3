@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าหลัก - เว็บไซต์สถานศึกษา</title>
+    <title>หน้าหลัก - วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</title>
     <style>
         * {
             box-sizing: border-box;
@@ -55,8 +55,8 @@
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400') center/cover;
-            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('banner.jpg') center/cover no-repeat;
+            height: 350px;
             color: white;
             display: flex;
             flex-direction: column;
@@ -65,13 +65,19 @@
             border-radius: 8px;
             margin-bottom: 25px;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
         .hero h2 {
             font-size: 2.2rem;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
-        /* News Section Grid */
+        /* Section Title Style */
         .section-title {
             font-size: 1.5rem;
             color: #003366;
@@ -79,30 +85,6 @@
             border-bottom: 3px solid #0099FF;
             display: inline-block;
             padding-bottom: 5px;
-        }
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 15px;
-        }
-        .card-content h3 {
-            margin-bottom: 10px;
-            color: #003366;
         }
 
         /* Vision Section */
@@ -131,8 +113,8 @@
 
     <!-- ส่วนหัว (Header) -->
     <header>
-        <h1>วิทยาลัยโปลิเทคนิคลานนา</h1>
-        <p>มุ่งมั่นพัฒนาวิชาชีพ ก้าวไกลสู่เทคโนโลยี</p>
+        <h1>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</h1>
+        <p>Lanna Polytechnic ChiangMai Technological College</p>
     </header>
 
     <!-- เมนูหลัก (Navigation Bar) -->
@@ -159,38 +141,12 @@
             <p>ผลิตและพัฒนากำลังคนด้านวิชาชีพให้มีคุณภาพ ได้มาตรฐานสากล มีคุณธรรมและจริยธรรม</p>
         </div>
 
-        <!-- ข่าวประชาสัมพันธ์ -->
-        <h3 class="section-title">ข่าวประชาสัมพันธ์</h3>
-        <div class="news-grid">
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="ข่าวสาร 1">
-                <div class="card-content">
-                    <h3>เปิดรับสมัครนักเรียนใหม่</h3>
-                    <p>กำหนดการรับสมัครนักเรียน นักศึกษา ใหม่ ประจำปีการศึกษา...</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="ข่าวสาร 2">
-                <div class="card-content">
-                    <h3>กิจกรรมวันสำคัญ</h3>
-                    <p>ขอเชิญคณะครูและนักเรียนเข้าร่วมกิจกรรมเนื่องในวันสำคัญ...</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="ข่าวสาร 3">
-                <div class="card-content">
-                    <h3>ผลการแข่งขันทักษะวิชาชีพ</h3>
-                    <p>ขอแสดงความยินดีกับนักเรียนที่ได้รับรางวัลจากการแข่งขัน...</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <!-- ส่วนท้าย (Footer) -->
     <footer>
-        <p>วิทยาลัยการอาชีพ ตัวอย่าง | ที่อยู่: 123 หมู่ 1 ถนนสายหลัก ตำบลในเมือง อำเภอเมือง จังหวัด 10000</p>
-        <p>โทรศัพท์: 02-123-4567 | อีเมล: contact@school.ac.th</p>
+        <p>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา เชียงใหม่</p>
+        <p>โทรศัพท์: 053-213-061 | อีเมล: lanna@polytechnic.ac.th</p>
         <p>Copyright © 2026 All Rights Reserved.</p>
     </footer>
 
