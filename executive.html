@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลผู้บริหาร - เว็บไซต์สถานศึกษา</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 1. Header & Banner */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 5px;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background-color: #002244;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: #0099FF;
+            color: white;
+        }
+
+        /* Container Content */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 1.5rem;
+            color: #003366;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #0099FF;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Executive Cards Layout */
+        .director-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .deputy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .exec-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+        .exec-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .exec-card img {
+            width: 160px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background-color: #ccc;
+        }
+
+        .exec-card.main-director {
+            max-width: 350px;
+            width: 100%;
+            border: 2px solid #0099FF;
+        }
+
+        .exec-card h3 {
+            color: #003366;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .exec-card .position {
+            color: #0099FF;
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .exec-card .details {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #002244;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนหัว (Header) -->
+    <header>
+        <h1>วิทยาลัยการอาชีพ ตัวอย่าง</h1>
+        <p>มุ่งมั่นพัฒนาวิชาชีพ ก้าวไกลสู่เทคโนโลยี</p>
+    </header>
+
+    <!-- เมนูหลัก (Navigation Bar) - กำหนดปุ่ม active ที่ 'ข้อมูลผู้บริหาร' -->
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="executive.html" class="active">ข้อมูลผู้บริหาร</a>
+        <a href="staff.html">ข้อมูลบุคลากร</a>
+        <a href="students.html">ข้อมูลนักเรียน นักศึกษา</a>
+        <a href="courses.html">สาขาวิชาที่เปิดสอน</a>
+    </nav>
+
+    <!-- ส่วนเนื้อหา (Content Area) -->
+    <div class="container">
+        
+        <h3 class="section-title">โครงสร้างผู้บริหารสถานศึกษา</h3>
+
+        <!-- ผู้อำนวยการ (ตรงกลางใหญ่สุด) -->
+        <div class="director-section">
+            <div class="exec-card main-director">
+                <img src="https://via.placeholder.com/160x200" alt="ผู้อำนวยการ">
+                <h3>นายสมชาย ใจดี</h3>
+                <p class="position">ผู้อำนวยการวิทยาลัยการอาชีพตัวอย่าง</p>
+                <p class="details">โทรศัพท์: 02-123-4567 ต่อ 101<br>อีเมล: director@school.ac.th</p>
+            </div>
+        </div>
+
+        <h3 class="section-title">รองผู้อำนวยการ</h3>
+
+        <!-- แถวรองผู้อำนวยการ 4 ฝ่าย -->
+        <div class="deputy-grid">
+            <div class="exec-card">
+                <img src="https://via.placeholder.com/160x200" alt="รองผู้อำนวยการ">
+                <h3>นางสาววิภา รักเรียน</h3>
+                <p class="position">รองผู้อำนวยการฝ่ายวิชาการ</p>
+                <p class="details">โทรศัพท์: 02-123-4567 ต่อ 102</p>
+            </div>
+
+            <div class="exec-card">
+                <img src="https://via.placeholder.com/160x200" alt="รองผู้อำนวยการ">
+                <h3>นายวิชัย บริหารดี</h3>
+                <p class="position">รองผู้อำนวยการฝ่ายบริหารทรัพยากร</p>
+                <p class="details">โทรศัพท์: 02-123-4567 ต่อ 103</p>
+            </div>
+
+            <div class="exec-card">
+                <img src="https://via.placeholder.com/160x200" alt="รองผู้อำนวยการ">
+                <h3>นายปัญญา แผนงานเลิศ</h3>
+                <p class="position">รองผู้อำนวยการฝ่ายแผนงานและความร่วมมือ</p>
+                <p class="details">โทรศัพท์: 02-123-4567 ต่อ 104</p>
+            </div>
+
+            <div class="exec-card">
+                <img src="https://via.placeholder.com/160x200" alt="รองผู้อำนวยการ">
+                <h3>นางนภา กิจการดี</h3>
+                <p class="position">รองผู้อำนวยการฝ่ายพัฒนากิจการนักเรียนฯ</p>
+                <p class="details">โทรศัพท์: 02-123-4567 ต่อ 105</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ส่วนท้าย (Footer) -->
+    <footer>
+        <p>วิทยาลัยการอาชีพ ตัวอย่าง | ที่อยู่: 123 หมู่ 1 ถนนสายหลัก ตำบลในเมือง อำเภอเมือง จังหวัด 10000</p>
+        <p>โทรศัพท์: 02-123-4567 | อีเมล: contact@school.ac.th</p>
+        <p>Copyright © 2026 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
